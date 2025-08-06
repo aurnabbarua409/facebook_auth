@@ -1,0 +1,17 @@
+
+      
+keytool -exportcert -alias androiddebugkey -keystore "C:\Users\USERNAME\.android\debug.keystore" | "C:\openssl\bin\openssl" sha1 -binary | "C:\openssl\bin\openssl" base64
+
+
+      
+keytool -exportcert -alias androiddebugkey -keystore "C:\Users\Aurnab_Barua\.android\debug.keystore" | "C:\openssl\bin\openssl" sha1 -binary | "C:\openssl\bin\openssl" base64
+      
+SQ/bwszbT59sG/4yicQ0enu1iW8=
+
+
+
+      
+keytool -exportcert -alias SQ/bwszbT59sG/4yicQ0enu1iW8= -keystore C:\Users\Aurnab_Barua\.android\debug.keystore | openssl sha1 -binary | openssl base64
+
+
+Facebook password: ebjBYA?/uHXm3y5
