@@ -20,13 +20,14 @@ samples, guidance on mobile development, and a full API reference.
 
 <li>Generate file:  android\app\src\main\res\values\strings.xml </li>
 
-<li>write these text in the Strings.xml file:
+<li>write these text in the Strings.xml file: </li>
+```xml
 <resources>
      <string name="app_name">myapp1</string>
     <string name="facebook_app_id">1685541038816554</string>
     <string name="fb_login_protocol_scheme">fb1685541038816554</string>
     <string name="facebook_client_token">19c8e7184e56a268397d5d0be1d22268</string>
-</resources> </li>
+</resources> 
 
 <li>open this file: /android/app/src/main/AndroidManifest.xml </li>
 <li>In AndroidManifest.xml file, in application write:
