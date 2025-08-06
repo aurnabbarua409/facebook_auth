@@ -25,9 +25,9 @@ samples, guidance on mobile development, and a full API reference.
 ```xml
 <resources>
      <string name="app_name">myapp1</string>
-    <string name="facebook_app_id">1685541038816554</string>
-    <string name="fb_login_protocol_scheme">fb1685541038816554</string>
-    <string name="facebook_client_token">19c8e7184e56a268397d5d0be1d22268</string>
+     <string name="facebook_app_id">1685541038816554</string>
+     <string name="fb_login_protocol_scheme">fb1685541038816554</string>
+     <string name="facebook_client_token">19c8e7184e56a268397d5d0be1d22268</string>
 </resources> 
 ```
 <li>open this file: /android/app/src/main/AndroidManifest.xml </li>
@@ -35,16 +35,18 @@ samples, guidance on mobile development, and a full API reference.
 
 ```xml
 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
-   	<meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+<meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
 ```
 then in manifest: 
 
 ```xml
- <queries>
-        <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
-    </queries>
+<queries>
+     <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
+</queries>
 ```
-<li> then create a method:
+<li> then create a method and write this: </li>
+
+```dart
 final LoginResult result = await FacebookAuth.instance
         .login(); // by default we request the email and the public profile
     // or FacebookAuth.i.login()
@@ -58,4 +60,5 @@ final LoginResult result = await FacebookAuth.instance
     } else {
       print(result.status);
       print(result.message);
-    } </li>
+    }
+```
