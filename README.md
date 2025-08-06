@@ -31,14 +31,19 @@ samples, guidance on mobile development, and a full API reference.
 </resources> 
 ```
 <li>open this file: /android/app/src/main/AndroidManifest.xml </li>
-<li>In AndroidManifest.xml file, in application write:
+<li>In AndroidManifest.xml file, in application write: </li>
+
+```xml
 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
    	<meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
-then in manifest:
+```
+then in manifest: 
+
+```xml
  <queries>
         <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
     </queries>
-        </li>
+```
 <li> then create a method:
 final LoginResult result = await FacebookAuth.instance
         .login(); // by default we request the email and the public profile
