@@ -16,28 +16,28 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 # Steps for Facebook Auth:
-<li>1. Go to https://developers.facebook.com/docs/facebook-login/android/?locale=en&lsrc=lb </li>
+<li>Go to https://developers.facebook.com/docs/facebook-login/android/?locale=en&lsrc=lb </li>
 
-<li>2. Genmerate file:  android\app\src\main\res\values\strings.xml </li>
+<li>Generate file:  android\app\src\main\res\values\strings.xml </li>
 
-then, write:
+<li>write these text in the Strings.xml file:
 <resources>
      <string name="app_name">myapp1</string>
     <string name="facebook_app_id">1685541038816554</string>
     <string name="fb_login_protocol_scheme">fb1685541038816554</string>
     <string name="facebook_client_token">19c8e7184e56a268397d5d0be1d22268</string>
-</resources>
+</resources> </li>
 
-3. open: /android/app/src/main/AndroidManifest.xml
-then, in application:
+<li>open this file: /android/app/src/main/AndroidManifest.xml </li>
+<li>In AndroidManifest.xml file, in application write:
 <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
    	<meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
 then in manifest:
  <queries>
         <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
     </queries>
-
-4. then create a method:
+        </li>
+<li> then create a method:
 final LoginResult result = await FacebookAuth.instance
         .login(); // by default we request the email and the public profile
     // or FacebookAuth.i.login()
@@ -51,4 +51,4 @@ final LoginResult result = await FacebookAuth.instance
     } else {
       print(result.status);
       print(result.message);
-    }
+    } </li>
